@@ -1,0 +1,13 @@
+name: Auto Assign PR
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  assign:
+    uses: tempoxyz/ci/.github/workflows/auto-assign-pr.yml@b73270c9ac67ef4b74ad6ae8ec2ad409b78623ff # main
